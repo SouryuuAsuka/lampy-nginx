@@ -29,4 +29,5 @@ jobs:
           git pull git@github.com:SouryuuAsuka/nginx-projector.git main
           git status
           docker-compose build
+          cd ../
           docker-compose up
