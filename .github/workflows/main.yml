@@ -25,8 +25,8 @@ jobs:
         script: |
           echo {$USER}
           ssh -T git@github.com
-          cd ~/projects/nginx-projector
+          cd ~/docker-projector/nginx-projector
           git pull git@github.com:SouryuuAsuka/nginx-projector.git main
           git status
-          docker-composer build
-          docker-composer up
+          docker-compose build
+          docker-compose up
