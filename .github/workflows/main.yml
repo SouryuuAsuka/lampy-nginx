@@ -17,8 +17,8 @@ jobs:
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.HOST_IP }}
-        #username: ${{ secrets.HOST_USERNAME }}
-        username: gitactions
+        username: ${{ secrets.HOST_USERNAME }}
+        #username: gitactions
         key: ${{ secrets.PRIVATE_KEY }}
         passphrase: ${{ secrets.KEY_PASSPHRASE }}
         port: 22
@@ -30,5 +30,4 @@ jobs:
           git status
           cd ../
           docker-compose build
-          
           docker-compose up
