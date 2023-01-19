@@ -1,0 +1,17 @@
+FROM nginx:latest
+
+# создание директории приложения
+WORKDIR /usr/src/docker/lira-nginx
+
+
+COPY ./conf.d/default.conf  /etc/nginx/conf.d/default.conf
+
+#настраиваем автозапуск сервера 
+#RUN systemctl enable nginx
+#RUN RUN systemctl enable nginx
+
+#Перезапустите Nginx:
+
+EXPOSE 80 
+
+CMD ["nginx", "-g", "daemon off;"]
