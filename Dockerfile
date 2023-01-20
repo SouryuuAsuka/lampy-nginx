@@ -4,11 +4,11 @@ FROM nginx:latest
 WORKDIR /usr/src/docker/lira-nginx
 
 
-COPY ./conf.d/  /etc/nginx/sites-available/
+COPY ./conf.d/  /etc/nginx/conf.d/
 
 #настраиваем автозапуск сервера 
-RUN mkdir /etc/nginx/sites-enabled/
-RUN ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
+#RUN systemctl enable nginx
+#RUN RUN systemctl enable nginx
 
 #Перезапустите Nginx:
 
