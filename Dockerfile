@@ -8,7 +8,7 @@ COPY ./conf.d/  /etc/nginx/sites-available/
 
 #настраиваем автозапуск сервера 
 #RUN systemctl enable nginx
-RUN  ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/reverse-proxy.conf
+RUN  ln -s /etc/nginx/sites-available/* /etc/nginx/sites-enabled/
 
 #Перезапустите Nginx:
 
