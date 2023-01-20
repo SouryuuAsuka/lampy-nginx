@@ -4,7 +4,7 @@ FROM nginx:latest
 WORKDIR /usr/src/docker/lira-nginx
 
 
-COPY ./conf.d/*  /etc/nginx/conf.d/*
+COPY ./conf.d/  /etc/nginx/conf.d/
 
 #настраиваем автозапуск сервера 
 #RUN systemctl enable nginx
