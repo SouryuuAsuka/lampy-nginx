@@ -1,5 +1,5 @@
-name: nginx-build
-run-name: ${{ github.actor }} starts building the projector-panel 
+name: lampy-nginx-build
+run-name: ${{ github.actor }} starts building the lampy-nginx
 on:
   push:
     branches:
@@ -25,9 +25,9 @@ jobs:
         script: |
           echo {$USER}
           ssh -T git@github.com
-          cd ~/projectorfund/nginx-projector
-          git pull git@github.com:SouryuuAsuka/nginx-projector.git main
+          cd ~/lampy/lampy-nginx
+          git pull git@github.com:SouryuuAsuka/lampy-nginx.git main
           git status
-          cd ../docker-projector
+          cd ../lampy-docker
           docker-compose build
           docker-compose up -d
