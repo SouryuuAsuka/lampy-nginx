@@ -1,8 +1,6 @@
 
 version: "3"
-
 services:
-
   nginx:
     build: ../lampy-nginx/
     container_name: global-nginx
