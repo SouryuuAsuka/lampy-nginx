@@ -13,8 +13,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:
-      - lampyhelp-default
-      - lm-default
+      - lampy-docker_default
+      - lm-docker_default
 
 networks:
   default:
