@@ -25,7 +25,7 @@ jobs:
         script: |
           echo {$USER}
           ssh -T git@github.com
-          cd ~/nginx
+          cd ~/lampy-nginx
           git pull git@github.com:SouryuuAsuka/lampy-nginx.git main
           git status
           docker-compose build
