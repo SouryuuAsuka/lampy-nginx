@@ -1,0 +1,23 @@
+
+version: "3"
+
+services:
+
+  nginx:
+    build: ../lampy-nginx/
+    container_name: lampy-nginx
+
+    ports:
+      - 80:80
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - lampyhelp-default
+      - lm-default
+
+networks:
+  default:
+      ipam:
+        config:
+        - subnet: 172.18.0.1/16
