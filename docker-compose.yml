@@ -15,9 +15,13 @@ services:
     networks:
       - lampy-docker_default
       - lm-docker_default
-
+  
 networks:
   default:
       ipam:
         config:
         - subnet: 172.18.0.1/16
+  lampy-docker_default:
+    external: true
+  lm-docker_default:
+    external: true
