@@ -14,7 +14,7 @@ services:
       - lampy-docker_default
       - lm-docker_default
 
-  
+   
 networks:
   default:
       ipam:
