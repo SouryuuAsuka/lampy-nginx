@@ -13,6 +13,7 @@ services:
     networks:
       - lampy-docker_default
       - lm-docker_default
+      - bc-proheadprodcom_default
 
    
 networks:
@@ -23,4 +24,6 @@ networks:
   lampy-docker_default:
     external: true
   lm-docker_default:
+    external: true
+  bc-proheadprodcom_default:
     external: true
