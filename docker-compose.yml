@@ -2,6 +2,8 @@
 version: "3"
 services:
   nginx:
+    image: "jwilder/nginx-proxy:latest"
+    restart: "always"
     build: ../lampy-nginx/
     container_name: global-nginx
 
@@ -11,9 +13,8 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
     networks:
-      - lampy-docker_default
-      - lm-docker_default
-      - bc-proheadprodcom_default
+      net:
+        external: true
 
    
 networks:
