@@ -13,8 +13,3 @@ services:
     networks:
       - main-net
 
-networks:
-  main-net:
-      ipam:
-        config:
-        - subnet: 172.17.0.1/16
