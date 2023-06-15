@@ -4,7 +4,6 @@ services:
   nginx:
     build: ../lampy-nginx/
     container_name: global-nginx
-
     ports:
       - 80:80
     restart: always
@@ -12,6 +11,6 @@ services:
       - "host.docker.internal:host-gateway"
     networks:
       - main-net
-  networks:
-    main-net:
-      external: true
+networks:
+  main-net:
+    external: true
