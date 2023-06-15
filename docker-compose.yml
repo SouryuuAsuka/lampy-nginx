@@ -10,6 +10,8 @@ services:
     restart: always
     extra_hosts:
       - "host.docker.internal:host-gateway"
+    networks:
+      - main-net
 
 networks:
   main-net:
